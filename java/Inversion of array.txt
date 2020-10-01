@@ -1,0 +1,78 @@
+Method-1:  compare every element with all of its descendants
+
+
+Time Complexity:O(n2)
+Space Complexity:O(n)
+
+
+Method-2:
+
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+class GFG
+ {
+    // public static int count = 0;
+    public static long sort(int arr[],int l,int r){
+        long count = 0;
+        if(l<r){
+            int mid = (l+r)/2;
+           count = sort(arr,l,mid);
+           count+= sort(arr,mid+1,r);
+           count += merge(arr,l,mid,r);
+        }
+        return count;
+    }
+    
+    public static int merge(int arr[],int l,int mid,int r){
+        int n1 = mid-l+1;
+        int n2 = r - mid;
+        int L[] = new int[n1];
+        int R[] = new int[n2];
+        int swaps = 0;
+        for(int i=0;i<n1;i++)
+          L[i] = arr[l+i];
+        
+        for(int i=0;i<n2;i++)
+          R[i] = arr[mid+1+i];
+          
+        int i =0,j=0,k=l;
+        while(i<n1 && j<n2){
+            if(L[i]<=R[j]){
+                arr[k++] = L[i++];
+                
+            }else{
+                arr[k++] = R[j++];
+                swaps = swaps + (n1-i);
+            }
+        }
+        while(i<n1){
+            arr[k++] = L[i++];
+        }
+        while(j<n2){
+            arr[k++] = R[j++];
+        }
+        return swaps;  
+    }
+    
+	public static void main (String[] args)
+	 {
+	    Scanner sc = new Scanner(System.in);
+	    int tc = sc.nextInt();
+	    while(tc -- >0){
+	        int n = sc.nextInt();
+	        int arr[] = new int[n];
+	        for(int i=0;i<n;i++)
+	          arr[i] = sc.nextInt();
+	         
+	       
+	   
+	        System.out.println( sort(arr,0,n-1));
+	          
+	    }
+	 }
+}
+
+
+Time Complexity:O(nlogn)
+Space Complexity:O(n)
