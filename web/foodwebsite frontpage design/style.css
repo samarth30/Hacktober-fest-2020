@@ -1,0 +1,178 @@
+.navbar{
+    display: flex;
+position: relative;
+    
+}
+.navbar::before{
+    content: "";
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    position:absolute;
+    z-index: -1;
+    opacity: 0.2;
+}
+#logo{
+    height: 56px;
+    width: 82px;
+    margin: 9px 27px;
+}
+
+
+*{
+    margin:0px;
+    padding:0px;
+    box-sizing: border-box;
+}
+.nav {
+    display: flex;
+
+
+}
+.nav li{
+    list-style-type: none;
+color:white;
+}
+.nav li a{
+
+    margin: 42px;
+    padding: 34px;
+    padding: 1px;
+    display: block;
+    text-decoration: none;
+    color:white;
+}
+.nav li a:hover{
+    background-color: white;
+    color:black;
+    font-size: 20px;
+}
+
+#home{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color:white;
+    height: 46%;
+    height: 45%;
+    
+}
+#home::before{
+    content: "";
+    position:absolute;
+    top:0px;
+    left:0px;
+    height: 53%;
+    width: 100%;
+    background-image: url("main.jpg");
+    height: 57%;
+    z-index: -1; 
+    opacity: 0.89;
+}
+
+#home h1{
+    font-size: 2.8em;
+
+    margin: 23px 5px;
+    
+}
+#home div button{
+border:5px solid greenyellow;
+padding:3px;
+margin:17px;
+font-size: 20px;
+font-weight: bold;
+transition: width 9s;
+cursor: pointer;
+}
+/* utilities */
+.h1-primary{
+    font-size: 4.8rem;
+    padding:12px;
+    text-align: center;
+}
+.btn{
+    font-size: 13px;
+    padding:10px;
+}
+#home div button:hover{
+    width:300px;
+}
+.h2-secondary{
+    text-align: center;
+    color: darkgray;
+}
+#serviceContainer h1{
+text-align: center;
+margin:18px;
+padding:5px;
+font-size: 63px;
+font-weight:900;
+}
+.services{
+    display: flex;
+   padding:20px; 
+}
+.box{
+    border:2px solid red;
+   border-radius: 30px;
+   padding:20px; 
+   margin:10px;
+}
+.box img{
+    height: 105px;
+    width:125px;
+    margin:auto;
+    display:block;
+}
+.box h2{
+text-align: center;
+
+font-size: 3.2rem;
+}
+.partner{
+    display: flex;
+    padding:12px;
+    justify-content: center;
+    align-items: center;
+}
+.box1 img{
+    height: 250px;
+    
+}
+
+.box1{
+    padding:9px;
+    margin:10px 20px;
+}
+.partner::before{
+
+    content: "";
+    position: absolute;
+    background-image: url('partner.jpg');
+    height: 45%;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.3;
+
+}
+#ourpartner h1{
+    padding: 14px;
+    margin: 46px 2px;
+
+}
+.center{
+    text-align: center;
+    font-size: 1.3rem;;
+}
+
+.footer{
+height: 2px;
+width:100%;
+}
+.footer div{
+    background-color: black;
+    color: rgb(119, 27, 27);
+    padding:30px;
+}
