@@ -1,0 +1,174 @@
+<html>
+<head>
+<link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+<script src="javascript.js" ></script>
+<!--<script type="text/javascript">
+//function is made//
+function call()
+{
+var vs=document.getElementById("para").value;
+if(vs==""){
+document.getElementById("message").style.color="yellow";
+document.getElementById("message").innerHTML="plz fill it";
+}
+else{
+document.getElementById("message").style.color="#00FF00";
+document.getElementById("message").innerHTML="valid";}
+}
+
+
+function call2()
+{
+var a=document.getElementById("para3").value;
+var b=(/^[a-zA-Z]{2,20}$/);
+
+if(b.test(a))
+{
+document.getElementById("message3").style.color="#00FF00";
+document.getElementById("message3").innerHTML="valid";
+}
+else{
+document.getElementById("message3").style.color="red";
+document.getElementById("message3").innerHTML="invalid";}
+}
+function sub(){
+if(document.myForm.firstname.value == "")
+{
+alert("Please provide your name!");
+document.myForm.firstname.focus();
+return false;
+}
+if(document.myForm.lastname.value == "")
+{
+alert("Please provide your last name!");
+document.myForm.lastname.focus();
+return false;
+}
+if(document.myForm.phonenumber.value == "")
+{
+alert("Please provide your phone number!");
+document.myForm.phonenumber.focus();
+return false;
+}
+if(document.myForm.email.value == "")
+{
+alert("Please provide your email!");
+document.myForm.email.focus();
+return false;
+}
+if(document.myForm.password.value == "")
+{
+alert("Please set password!");
+document.myForm.password.focus();
+return false;
+}
+
+alert("form submitted");
+
+return (true);
+
+}
+
+
+
+function number(){
+	var vs=document.getElementById("para2").value;
+	var ch=(/^\d{3}-\d{3}-\d{4}$/);
+	if(vs==""){
+	document.getElementById("message2").style.color="yellow";
+document.getElementById("message2").innerHTML="plz fill it";
+}else{
+	if(ch.test(vs)){
+	    document.getElementById("message2").style.color="#00FF00";
+		document.getElementById("message2").innerHTML="valid";
+	}
+	else{
+	    document.getElementById("message2").style.color="red";
+		document.getElementById("message2").innerHTML="invalid";
+	}}
+}
+</script>-->
+<link rel="stylesheet" type="text/css" href="style.css">
+
+</head>
+<body >
+<ul>
+  <li class="list"><em>SAT,AUG 22,2020</em></li>
+  
+  <li style="float:right"><a href="00mainpage.html#form">Contact Us</a></li>
+  <li style="float:right"><a href="00mainpage.html">Home</a></li>
+</ul>
+<br>
+
+<!--form-->
+<fieldset style="margin:200px auto;width:900px;">
+<legend style="background-color:blue;color:white;text-align:center;font-family:Lobster;letter-spacing:4px;word-spacing:5px;font-size:50px">SIGNUP PAGE</legend>
+<form name="myForm"  onsubmit="return (sub());" method="post">
+<table style="height:300px;width:1000px;background-color:black;" cellpadding="30px" cellspacing="6px" >
+<tr>
+<td><label>FIRSTNAME:</label></td><td>
+<input type="text" name="firstname" id="para" placeholder="Mark"  onblur="call();" /></td><td><span id="message"></span></td>
+</tr>
+<tr><td>
+<label>LASTNAME:</label></td><td>
+<input type="text" id="para3" name="lastname"  onblur="call2();"/></td><td><span id="message3"></span></td></tr>
+<tr><td>
+<label>PHONE-NUMBER:</label></td><td>
+<input type="text" name="phonenumber" id="para2" placeholder="xxx-xxx-xxxx" onblur="number();"/></td><td><span id="message2"></span></td></tr>
+<tr><td>
+<label>EMAIL:</label></td><td>
+<input type="text" name="email" id="para2" placeholder="id@gmail.com" onblur="number();"/></td><td><span id="message2"></span></td></tr>
+<tr><td>
+<label>PASSWORD:</label></td><td>
+<input type="password" name="password" id="pwd" placeholder="*******" onblur="number();"/></td><td><span id="message2"></span></td></tr>
+
+<tr><td>
+<label>SELECT:</label></td><td>
+<input type="checkbox" name="" checked><label>MALE</label><br>
+<input type="checkbox" name="" ><label>FEMALE</label><br>
+</td></tr>
+<tr>
+<td><label>AREA</label></td>
+<td><input type="radio" name="give" checked="checked"><label>Urban</label><br>
+<input type="radio" name="give"><label>Rural</label><br>
+</td></tr>
+
+</table>
+<br>
+<center><button onclick="sub()"><label style="background-color:black;color:white;">Submit</label></button></center>
+
+</form>
+</fieldset>
+
+ <div class="footer" id="footer">
+  <table id="t1" cellpadding="20px"
+			cellspacing="20px"align="center">
+  <tr>
+  <th>WHAT WE DO</th>
+  <th>REGIONS WE COVER</th>
+  <th>CONTACT US</th>
+  </tr>
+  <tr>
+  <td>AWARE PEOPLE</td>
+  <td>DELHI</td>
+  <td>EMAIL</td>
+  
+  </tr>
+  <tr>
+  <td>CORONA UPDATE</td>
+  <td>MAHARASHTRA</td>
+  <td>FACEBOOK</td>
+  </tr>
+  <tr>
+  <td>SAFETY MEASURES</td>
+  <td>UP</td>
+  <td>INSTAGRAM</td>
+  </tr>
+  
+  </table>
+  
+  
+</div>
+
+</body>
+</html>
