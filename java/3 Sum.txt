@@ -1,0 +1,55 @@
+Method1:===========================
+Brute Force (run 3 loops)
+
+Time Complexity:O(n3)
+Sapce Complexity:O(n)
+
+Method2:===============================
+HashMap
+
+   static void findTriplets(int arr[], int n, int sum) 
+    { 
+        for (int i = 0; i < n - 1; i++) { 
+            // Find all pairs with sum equals to 
+            // "sum-arr[i]" 
+            HashSet<Integer> s = new HashSet<>(); 
+            for (int j = i + 1; j < n; j++) { 
+                int x = sum - (arr[i] + arr[j]); 
+                if (s.contains(x)) 
+                    System.out.printf( 
+                        "%d %d %d\n", x, arr[i], arr[j]); 
+                else
+                    s.add(arr[j]); 
+            } 
+        } 
+    } 
+
+
+Time Complexity:O(n2)
+Space Complexity:O(n)
+
+
+Method3:=======================================
+class Solution {
+    public List<List<Integer>> threeSum(int[] nums) {
+        if (nums.length < 3) return new ArrayList<>(); // if nums less than 3 element
+        Arrays.sort(nums); // sort array
+        Set<List<Integer>> set = new HashSet<>();
+        for (int i = 0; i < nums.length - 2; i++) {
+            int j = i + 1;
+            int k = nums.length - 1;
+            while (j < k) {
+                int sum = nums[i] + nums[j] + nums[k];
+                if (sum == 0) set.add(Arrays.asList(nums[i], nums[j++], nums[k--]));
+                else if (sum > 0) k--;
+                else if (sum < 0) j++;
+            }
+
+        }
+
+        return new ArrayList<>(set);
+    }
+}
+
+Time Complexity:O(n2)
+Space Complexity:O(1)
