@@ -1,6 +1,6 @@
 # hackatober-fest-2020
 
-#### TO Get a tshirt of hackatober fest you have just make 4 pull requests 
+#### TO Get a tshirt of hackatober fest you have to just make 4 pull requests 
 #### but before making pull request first register yourself on https://hacktoberfest.digitalocean.com/
 #### Fork this repo and star this repo
 #### if you unstar this repo than you will not get a tshirt
