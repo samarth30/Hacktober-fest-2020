@@ -1,4 +1,30 @@
+var memory = Cookies.getJSON('memory') || {};
 
+var html_el = document.documentElement;
+var platform_el = document.getElementById('platform');
+var os_el = document.getElementById('os');
+var browser_el = document.getElementById('browser');
+var browser_width_el = document.getElementById('browserWidth');
+var wider_el = document.getElementById('wider');
+var return_el = document.getElementById('return');
+var resume_el = document.getElementById('resume');
+var reset_el = document.getElementById('reset');
+
+var state = {
+  current_step: 0,
+  platform: '',
+  browser: '',
+  os: ''
+};
+
+window.old_alert = window.alert;
+window.alert = function(str) {
+  window.old_alert.apply(this, arguments);
+  var function_to_call = `checkStep${state.current_step}`;
+  if (window[function_to_call]) {
+    window[function_to_call](str);
+  }
+};
 
 function checkStep1(str) {
   if (str == 'Hello World!') {
