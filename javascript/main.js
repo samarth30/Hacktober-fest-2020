@@ -1,5 +1,16 @@
 
 
+function checkStep1(str) {
+  if (str == 'Hello World!') {
+    return showStep(2);
+  } else if (str.toLowerCase() == 'hello world!') {
+    return console.log(
+      'Watch out! In JavaScript, uppercase and lowercase letters are different. Make sure all letters have the proper case.'
+    );
+  }
+  console.log('Please type the correct string.');
+}
+
 function checkStep5(str) {
   if (str == 24) {
     return showStep(6);
